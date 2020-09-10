@@ -1,6 +1,6 @@
 ## Package
 
-[edit on github](https://github.com/alphazento/alphazento-docs/blob/master/create_package.md)
+[Edit on github](https://github.com/alphazento/alphazento_docs/blob/master/guide/create-package.md)
 
 A package is an module added to your application for enhancement which includes routes, controllers, views, vue components and configuration. Packages are created to manage your large applications into smaller modules. In the Alphazento, we have created plenty of packages at path `packages/alphazento/`. You can find a basic tree-structure of package below:
 
@@ -41,11 +41,11 @@ A package is an module added to your application for enhancement which includes 
     - _zento_assembly.php
 ```
 
-## Using Alphazento Package Generator To Create Package <a id="to-create-package"></a>
+## Using Alphazento Package Assistant To Create Package <a id="to-create-package"></a>
 
-You need to install Alphazento Package Generator with the help of composer. If you have not installed then you can check [here](https://github.com/alphazento/alphazento-package-generator#3-installation).
+You need to install Alphazento Package Assistant with the help of composer. If you have not installed then you can check [here](https://github.com/alphazento/alphazento-package-assistant).
 
-So, we are assuming that you have installed Alphazento Package Generator.
+So, we are assuming that you have installed Alphazento Package Assistant.
 
 Now, use this command.
 
@@ -70,9 +70,9 @@ Now let's step by step to finish your first package.
 
   - The Service Provider consists of two methods.
 
-    - [Boot Method](https://laravel.com/docs/7.x/providers#the-boot-method){: target="\_blank"}
+    - [Boot Method](https://laravel.com/docs/7.x/providers#the-boot-method)
 
-    - [Register Method](https://laravel.com/docs/7.x/providers#the-register-method){: target="\_blank"}
+    - [Register Method](https://laravel.com/docs/7.x/providers#the-register-method)
 
   - By default, after running **make:package** command, we present the sample **Plugin.php** file already.
 
@@ -138,7 +138,7 @@ Now let's step by step to finish your first package.
     ];
   ```
 
-  - [Zento Assembly](https://laravel.com/docs/7.x/providers#the-boot-method){: target="\_blank"}
+  - [Zento Assembly]
   - Now, the package should be able to found when you run command line:
     ```bash
     php artisan package:discover
@@ -152,7 +152,7 @@ Now let's step by step to finish your first package.
     ```php
     php artisan package:make-migration ACME_SamplePackage sample_package_table
     ```
-- Refer to [Laravel Migration Concept](https://laravel.com/docs/7.x/migrations){: target="\_blank"}
+- Refer to [Laravel Migration Concept](https://laravel.com/docs/7.x/migrations)
 
 #### Step-4 Enable Your Package
 
@@ -299,7 +299,7 @@ Now let's step by step to finish your first package.
     - \***\*acme-sample-package/index.blade.php\*\***
 
       ```php
-      <h2>Hello World! acme-sample-package </h2>
+      <div>Hello World! acme-sample-package </div>
       ```
 
   - Now try to access 'http://your-domain/samplepackage', you should be able to visit the page.
