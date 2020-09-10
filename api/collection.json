@@ -1,0 +1,3717 @@
+{
+    "variables": [],
+    "info": {
+        "name": "Alphazento API",
+        "_postman_id": "1bf5f633-0a07-4dcd-9128-71a823587a9b",
+        "description": "",
+        "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.0.0\/collection.json"
+    },
+    "item": [
+        {
+            "name": "ACL Management",
+            "description": "",
+            "item": [
+                {
+                    "name": "Retrieves all administrator\/customers(accept filter)",
+                    "request": {
+                        "url": {
+                            "protocol": "https",
+                            "host": "www.alphazento.com",
+                            "path": "api\/v1\/admin\/acl\/:scope\/users",
+                            "query": [
+                                {
+                                    "key": "id",
+                                    "value": "architecto",
+                                    "description": "user's id filter",
+                                    "disabled": false
+                                },
+                                {
+                                    "key": "firstname",
+                                    "value": "beatae",
+                                    "description": "user's firstname filter",
+                                    "disabled": false
+                                },
+                                {
+                                    "key": "lastname",
+                                    "value": "cumque",
+                                    "description": "user's lastname filter",
+                                    "disabled": false
+                                },
+                                {
+                                    "key": "email",
+                                    "value": "nesciunt",
+                                    "description": "user's email filter",
+                                    "disabled": false
+                                },
+                                {
+                                    "key": "active",
+                                    "value": "et",
+                                    "description": "user's active filter",
+                                    "disabled": false
+                                },
+                                {
+                                    "key": "page",
+                                    "value": "est",
+                                    "description": "pagination filter",
+                                    "disabled": false
+                                }
+                            ],
+                            "variable": [
+                                {
+                                    "id": "scope",
+                                    "key": "scope",
+                                    "value": "administrator",
+                                    "description": "options of ['administrator', 'customer']. Indicate backend or frontend."
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "[]"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "Retrieves user details",
+                    "request": {
+                        "url": {
+                            "protocol": "https",
+                            "host": "www.alphazento.com",
+                            "path": "api\/v1\/admin\/acl\/:scope\/users\/:id",
+                            "query": [],
+                            "variable": [
+                                {
+                                    "id": "scope",
+                                    "key": "scope",
+                                    "value": "administrator",
+                                    "description": "options of ['administrator', 'customer']. Indicate backend or frontend."
+                                },
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "1",
+                                    "description": "number user's id"
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "[]"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "create a new user",
+                    "request": {
+                        "url": {
+                            "protocol": "https",
+                            "host": "www.alphazento.com",
+                            "path": "api\/v1\/admin\/acl\/:scope\/users",
+                            "query": [],
+                            "variable": [
+                                {
+                                    "id": "scope",
+                                    "key": "scope",
+                                    "value": "administrator",
+                                    "description": "options of ['administrator', 'customer']. Indicate backend or frontend."
+                                }
+                            ]
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"email\": \"velit\",\n    \"name\": \"et\",\n    \"password\": \"molestias\"\n}"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "update user's details",
+                    "request": {
+                        "url": {
+                            "protocol": "https",
+                            "host": "www.alphazento.com",
+                            "path": "api\/v1\/admin\/acl\/:scope\/users\/:id",
+                            "query": [],
+                            "variable": [
+                                {
+                                    "id": "scope",
+                                    "key": "scope",
+                                    "value": "administrator",
+                                    "description": "options of ['administrator', 'customer']. Indicate backend or frontend."
+                                },
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "19",
+                                    "description": "number user's id"
+                                }
+                            ]
+                        },
+                        "method": "PATCH",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "[]"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "set config key value pair by input key value pair items",
+                    "request": {
+                        "url": {
+                            "protocol": "https",
+                            "host": "www.alphazento.com",
+                            "path": "api\/v1\/admin\/acl\/:scope\/users\/:id",
+                            "query": [],
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "18",
+                                    "description": "number required user id to delete"
+                                }
+                            ]
+                        },
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "[]"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "Retrieves user's all roles",
+                    "request": {
+                        "url": {
+                            "protocol": "https",
+                            "host": "www.alphazento.com",
+                            "path": "api\/v1\/admin\/acl\/:scope\/users\/:id\/roles",
+                            "query": [],
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "2",
+                                    "description": "number user's id"
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "[]"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "save user's roles",
+                    "request": {
+                        "url": {
+                            "protocol": "https",
+                            "host": "www.alphazento.com",
+                            "path": "api\/v1\/admin\/acl\/:scope\/users\/:id\/roles",
+                            "query": [],
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "17",
+                                    "description": "number user's id"
+                                }
+                            ]
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"ids\": \"aspernatur\"\n}"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "Retrieves user's white list routes",
+                    "request": {
+                        "url": {
+                            "protocol": "https",
+                            "host": "www.alphazento.com",
+                            "path": "api\/v1\/admin\/acl\/:scope\/users\/:id\/whiteroutes",
+                            "query": [],
+                            "variable": [
+                                {
+                                    "id": "scope",
+                                    "key": "scope",
+                                    "value": "administrator",
+                                    "description": "options of ['administrator', 'customer']. Indicate backend or frontend."
+                                },
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "1",
+                                    "description": "number the user's id"
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "[]"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "Retrieves user's black list routes",
+                    "request": {
+                        "url": {
+                            "protocol": "https",
+                            "host": "www.alphazento.com",
+                            "path": "api\/v1\/admin\/acl\/:scope\/users\/:id\/blackroutes",
+                            "query": [],
+                            "variable": [
+                                {
+                                    "id": "scope",
+                                    "key": "scope",
+                                    "value": "administrator",
+                                    "description": "options of ['administrator', 'customer']. Indicate backend or frontend."
+                                },
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "1",
+                                    "description": "number the user's id"
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "[]"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "add route to user's white list",
+                    "request": {
+                        "url": {
+                            "protocol": "https",
+                            "host": "www.alphazento.com",
+                            "path": "api\/v1\/admin\/acl\/:scope\/users\/:id\/whiteroutes",
+                            "query": [],
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "15",
+                                    "description": "number user's id"
+                                }
+                            ]
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"route_ids\": \"illo\"\n}"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "add route to user's black list",
+                    "request": {
+                        "url": {
+                            "protocol": "https",
+                            "host": "www.alphazento.com",
+                            "path": "api\/v1\/admin\/acl\/:scope\/users\/:id\/blackroutes",
+                            "query": [],
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "1",
+                                    "description": "number user's id"
+                                }
+                            ]
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"route_ids\": \"dicta\"\n}"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "delete route from user's white list",
+                    "request": {
+                        "url": {
+                            "protocol": "https",
+                            "host": "www.alphazento.com",
+                            "path": "api\/v1\/admin\/acl\/:scope\/users\/:id\/whiteroutes\/:route_id",
+                            "query": [],
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "18",
+                                    "description": "number user's id"
+                                }
+                            ]
+                        },
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"route_ids\": \"pariatur\"\n}"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "delete route from user's black list",
+                    "request": {
+                        "url": {
+                            "protocol": "https",
+                            "host": "www.alphazento.com",
+                            "path": "api\/v1\/admin\/acl\/:scope\/users\/:id\/blackroutes\/:route_id",
+                            "query": [],
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "16",
+                                    "description": "number user's id"
+                                }
+                            ]
+                        },
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"route_ids\": \"maiores\"\n}"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "Retrieves all roles in a scope",
+                    "request": {
+                        "url": {
+                            "protocol": "https",
+                            "host": "www.alphazento.com",
+                            "path": "api\/v1\/admin\/acl\/:scope\/roles",
+                            "query": [],
+                            "variable": [
+                                {
+                                    "id": "scope",
+                                    "key": "scope",
+                                    "value": "deserunt",
+                                    "description": "options of ['administrator', 'customer']. Indicate backend or frontend"
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "[]"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "Create a new role",
+                    "request": {
+                        "url": {
+                            "protocol": "https",
+                            "host": "www.alphazento.com",
+                            "path": "api\/v1\/admin\/acl\/:scope\/roles",
+                            "query": [
+                                {
+                                    "key": "name",
+                                    "value": "officia",
+                                    "description": "new role's name",
+                                    "disabled": false
+                                }
+                            ],
+                            "variable": [
+                                {
+                                    "id": "scope",
+                                    "key": "scope",
+                                    "value": "administrator",
+                                    "description": "options of ['administrator', 'customer']. Indicate backend or frontend."
+                                }
+                            ]
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "[]"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "Update role's details",
+                    "request": {
+                        "url": {
+                            "protocol": "https",
+                            "host": "www.alphazento.com",
+                            "path": "api\/v1\/admin\/acl\/:scope\/roles\/:id",
+                            "query": [
+                                {
+                                    "key": "name",
+                                    "value": "aliquid",
+                                    "description": "role's name",
+                                    "disabled": false
+                                }
+                            ],
+                            "variable": [
+                                {
+                                    "id": "scope",
+                                    "key": "scope",
+                                    "value": "administrator",
+                                    "description": "options of ['administrator', 'customer']. Indicate backend or frontend."
+                                },
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "13",
+                                    "description": "number the role's ID"
+                                }
+                            ]
+                        },
+                        "method": "PATCH",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "[]"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "Retrieves all routes which the role can access",
+                    "request": {
+                        "url": {
+                            "protocol": "https",
+                            "host": "www.alphazento.com",
+                            "path": "api\/v1\/admin\/acl\/:scope\/roles\/:id\/routes",
+                            "query": [],
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "7",
+                                    "description": "number the role's ID"
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "[]"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "Assign users to the role",
+                    "request": {
+                        "url": {
+                            "protocol": "https",
+                            "host": "www.alphazento.com",
+                            "path": "api\/v1\/admin\/acl\/:scope\/roles\/:id\/routes",
+                            "query": [],
+                            "variable": [
+                                {
+                                    "id": "scope",
+                                    "key": "scope",
+                                    "value": "administrator",
+                                    "description": "options of ['administrator', 'customer']. Indicate backend or frontend."
+                                },
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "13",
+                                    "description": "number the role's ID"
+                                }
+                            ]
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"ids\": \"consequatur\"\n}"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "De-assign routes from the role",
+                    "request": {
+                        "url": {
+                            "protocol": "https",
+                            "host": "www.alphazento.com",
+                            "path": "api\/v1\/admin\/acl\/:scope\/roles\/:id\/routes\/:route_id",
+                            "query": [],
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "7",
+                                    "description": "number the role's ID"
+                                }
+                            ]
+                        },
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"user_id\": \"exercitationem\"\n}"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "Retrieves all users belongs to the role",
+                    "request": {
+                        "url": {
+                            "protocol": "https",
+                            "host": "www.alphazento.com",
+                            "path": "api\/v1\/admin\/acl\/:scope\/roles\/:id\/users",
+                            "query": [],
+                            "variable": [
+                                {
+                                    "id": "scope",
+                                    "key": "scope",
+                                    "value": "administrator",
+                                    "description": "options of ['administrator', 'customer']. Indicate backend or frontend."
+                                },
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "1",
+                                    "description": "number the role's ID"
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "[]"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "Retrieves all users belongs to the role and also users not belongs to the roles",
+                    "request": {
+                        "url": {
+                            "protocol": "https",
+                            "host": "www.alphazento.com",
+                            "path": "api\/v1\/admin\/acl\/:scope\/roles\/:id\/users-with-candidates",
+                            "query": [],
+                            "variable": [
+                                {
+                                    "id": "scope",
+                                    "key": "scope",
+                                    "value": "administrator",
+                                    "description": "options of ['administrator', 'customer']. Indicate backend or frontend."
+                                },
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "1",
+                                    "description": "number the role's ID"
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "[]"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "Assign users to the role",
+                    "request": {
+                        "url": {
+                            "protocol": "https",
+                            "host": "www.alphazento.com",
+                            "path": "api\/v1\/admin\/acl\/:scope\/roles\/:id\/users",
+                            "query": [],
+                            "variable": [
+                                {
+                                    "id": "scope",
+                                    "key": "scope",
+                                    "value": "administrator",
+                                    "description": "options of ['administrator', 'customer']. Indicate backend or frontend."
+                                },
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "17",
+                                    "description": "number the role's ID"
+                                }
+                            ]
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"ids\": \"repellat\"\n}"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "De-assign users from the role",
+                    "request": {
+                        "url": {
+                            "protocol": "https",
+                            "host": "www.alphazento.com",
+                            "path": "api\/v1\/admin\/acl\/:scope\/roles\/:id\/users\/:user_id",
+                            "query": [],
+                            "variable": [
+                                {
+                                    "id": "scope",
+                                    "key": "scope",
+                                    "value": "administrator",
+                                    "description": "options of ['administrator', 'customer']. Indicate backend or frontend."
+                                },
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "7",
+                                    "description": "number the role's ID"
+                                }
+                            ]
+                        },
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"user_id\": \"et\"\n}"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "Retrieves all routes in a scope",
+                    "request": {
+                        "url": {
+                            "protocol": "https",
+                            "host": "www.alphazento.com",
+                            "path": "api\/v1\/admin\/acl\/:scope\/routes",
+                            "query": [
+                                {
+                                    "key": "from",
+                                    "value": "quaerat",
+                                    "description": "options of ['role', 'user', '', 'routes']",
+                                    "disabled": false
+                                }
+                            ],
+                            "variable": [
+                                {
+                                    "id": "scope",
+                                    "key": "scope",
+                                    "value": "administrator",
+                                    "description": "options of ['administrator', 'customer']. Indicate backend or frontend."
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "[]"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Admin Sales",
+            "description": "",
+            "item": [
+                {
+                    "name": "fetch\/filter sales orders",
+                    "request": {
+                        "url": {
+                            "protocol": "https",
+                            "host": "www.alphazento.com",
+                            "path": "api\/v1\/admin\/sales\/orders",
+                            "query": []
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "[]"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "api\/v1\/admin\/sales\/orders\/statuses",
+                    "request": {
+                        "url": {
+                            "protocol": "https",
+                            "host": "www.alphazento.com",
+                            "path": "api\/v1\/admin\/sales\/orders\/statuses",
+                            "query": []
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "[]"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "Retrieves an order by id",
+                    "request": {
+                        "url": {
+                            "protocol": "https",
+                            "host": "www.alphazento.com",
+                            "path": "api\/v1\/admin\/sales\/orders\/:id",
+                            "query": [],
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "14",
+                                    "description": "number order id"
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "[]"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "update an order's status",
+                    "request": {
+                        "url": {
+                            "protocol": "https",
+                            "host": "www.alphazento.com",
+                            "path": "api\/v1\/admin\/sales\/orders\/:id\/status\/:status_id",
+                            "query": [],
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "5",
+                                    "description": "number order id"
+                                },
+                                {
+                                    "id": "status_id",
+                                    "key": "status_id",
+                                    "value": "3",
+                                    "description": "number order's new status' id"
+                                }
+                            ]
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"comment\": 41992.8426\n}"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "api\/v1\/admin\/sales\/orders\/{id}\/hold",
+                    "request": {
+                        "url": {
+                            "protocol": "https",
+                            "host": "www.alphazento.com",
+                            "path": "api\/v1\/admin\/sales\/orders\/:id\/hold",
+                            "query": []
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "[]"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "api\/v1\/admin\/sales\/orders\/{id}\/unhold",
+                    "request": {
+                        "url": {
+                            "protocol": "https",
+                            "host": "www.alphazento.com",
+                            "path": "api\/v1\/admin\/sales\/orders\/:id\/unhold",
+                            "query": []
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "[]"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "api\/v1\/admin\/sales\/orders\/{id}\/comments",
+                    "request": {
+                        "url": {
+                            "protocol": "https",
+                            "host": "www.alphazento.com",
+                            "path": "api\/v1\/admin\/sales\/orders\/:id\/comments",
+                            "query": []
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "[]"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "api\/v1\/admin\/sales\/orders\/{id}\/comments",
+                    "request": {
+                        "url": {
+                            "protocol": "https",
+                            "host": "www.alphazento.com",
+                            "path": "api\/v1\/admin\/sales\/orders\/:id\/comments",
+                            "query": []
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "[]"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "add an admin note",
+                    "request": {
+                        "url": {
+                            "protocol": "https",
+                            "host": "www.alphazento.com",
+                            "path": "api\/v1\/admin\/sales\/notes",
+                            "query": []
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "[]"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Catalog",
+            "description": "",
+            "item": [
+                {
+                    "name": "list category tree",
+                    "request": {
+                        "url": {
+                            "protocol": "https",
+                            "host": "www.alphazento.com",
+                            "path": "api\/v1\/catalog\/categories\/tree",
+                            "query": []
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "[]"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "Retrieves specified categories by IDs",
+                    "request": {
+                        "url": {
+                            "protocol": "https",
+                            "host": "www.alphazento.com",
+                            "path": "api\/v1\/catalog\/categories\/:ids",
+                            "query": [],
+                            "variable": [
+                                {
+                                    "id": "ids",
+                                    "key": "ids",
+                                    "value": "3%2C4",
+                                    "description": "string category IDs"
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "[]"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "Retrieves product by id",
+                    "request": {
+                        "url": {
+                            "protocol": "https",
+                            "host": "www.alphazento.com",
+                            "path": "api\/v1\/catalog\/products\/:id",
+                            "query": [],
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "1",
+                                    "description": "number product id"
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "[]"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "Retrieves specified categories by IDs",
+                    "request": {
+                        "url": {
+                            "protocol": "https",
+                            "host": "www.alphazento.com",
+                            "path": "api\/v1\/admin\/catalog\/categories\/:ids",
+                            "query": [],
+                            "variable": [
+                                {
+                                    "id": "ids",
+                                    "key": "ids",
+                                    "value": "3%2C4",
+                                    "description": "string category IDs"
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "[]"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "list category tree",
+                    "request": {
+                        "url": {
+                            "protocol": "https",
+                            "host": "www.alphazento.com",
+                            "path": "api\/v1\/admin\/catalog\/categories\/tree",
+                            "query": []
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "[]"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "store a new category",
+                    "request": {
+                        "url": {
+                            "protocol": "https",
+                            "host": "www.alphazento.com",
+                            "path": "api\/v1\/admin\/catalog\/categories",
+                            "query": []
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "[]"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "set category's attribute's value",
+                    "request": {
+                        "url": {
+                            "protocol": "https",
+                            "host": "www.alphazento.com",
+                            "path": "api\/v1\/admin\/catalog\/categories\/:id\/:attribute",
+                            "query": [],
+                            "variable": [
+                                {
+                                    "id": "attribute",
+                                    "key": "attribute",
+                                    "value": "quas",
+                                    "description": "string Attribute name"
+                                }
+                            ]
+                        },
+                        "method": "PATCH",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"value\": \"ut\"\n}"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "Retrieves product by id",
+                    "request": {
+                        "url": {
+                            "protocol": "https",
+                            "host": "www.alphazento.com",
+                            "path": "api\/v1\/admin\/catalog\/products\/:id",
+                            "query": [],
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "1",
+                                    "description": "number product id"
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "[]"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "update a product's attribute's value",
+                    "request": {
+                        "url": {
+                            "protocol": "https",
+                            "host": "www.alphazento.com",
+                            "path": "api\/v1\/admin\/catalog\/products\/:id\/:attribute",
+                            "query": [],
+                            "variable": [
+                                {
+                                    "id": "attribute",
+                                    "key": "attribute",
+                                    "value": "iste",
+                                    "description": "string Attribute name"
+                                }
+                            ]
+                        },
+                        "method": "PATCH",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"value\": \"aut\"\n}"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Catalog Search",
+            "description": "",
+            "item": [
+                {
+                    "name": "execute a general catalog search or under a specified category from storefront",
+                    "request": {
+                        "url": {
+                            "protocol": "https",
+                            "host": "www.alphazento.com",
+                            "path": "api\/v1\/catalog\/search",
+                            "query": []
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "[]"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "execute a general catalog search or under a specified category from storefront",
+                    "request": {
+                        "url": {
+                            "protocol": "https",
+                            "host": "www.alphazento.com",
+                            "path": "api\/v1\/catalog\/search\/categories\/:id",
+                            "query": [],
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "1",
+                                    "description": "number specified category id"
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "[]"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "execute a catalog search from admin",
+                    "request": {
+                        "url": {
+                            "protocol": "https",
+                            "host": "www.alphazento.com",
+                            "path": "api\/v1\/admin\/catalog\/search",
+                            "query": []
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "[]"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Checkout",
+            "description": "",
+            "item": [
+                {
+                    "name": "store guest details when support guest checkout",
+                    "request": {
+                        "url": {
+                            "protocol": "https",
+                            "host": "www.alphazento.com",
+                            "path": "api\/v1\/checkout\/guest\/details",
+                            "query": []
+                        },
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "[]"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Customer",
+            "description": "",
+            "item": [
+                {
+                    "name": "Get current customer",
+                    "request": {
+                        "url": {
+                            "protocol": "https",
+                            "host": "www.alphazento.com",
+                            "path": "api\/v1\/customers\/me",
+                            "query": []
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "[]"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "update customer's details, except email and password",
+                    "request": {
+                        "url": {
+                            "protocol": "https",
+                            "host": "www.alphazento.com",
+                            "path": "api\/v1\/customers\/me",
+                            "query": []
+                        },
+                        "method": "PATCH",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"required\": \"autem\"\n}"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "Set current customer's password",
+                    "request": {
+                        "url": {
+                            "protocol": "https",
+                            "host": "www.alphazento.com",
+                            "path": "api\/v1\/customers\/me\/password",
+                            "query": [
+                                {
+                                    "key": "old_password",
+                                    "value": "consequatur",
+                                    "description": "old password min 8",
+                                    "disabled": false
+                                },
+                                {
+                                    "key": "new_password",
+                                    "value": "dolorem",
+                                    "description": "new password min 8",
+                                    "disabled": false
+                                }
+                            ]
+                        },
+                        "method": "PATCH",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "[]"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "get current user all address",
+                    "request": {
+                        "url": {
+                            "protocol": "https",
+                            "host": "www.alphazento.com",
+                            "path": "api\/v1\/customers\/me\/addresses",
+                            "query": []
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "[]"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "get address by id",
+                    "request": {
+                        "url": {
+                            "protocol": "https",
+                            "host": "www.alphazento.com",
+                            "path": "api\/v1\/customers\/me\/address\/:address_id",
+                            "query": []
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "[]"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "add address",
+                    "request": {
+                        "url": {
+                            "protocol": "https",
+                            "host": "www.alphazento.com",
+                            "path": "api\/v1\/customers\/me\/addresses",
+                            "query": []
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "[]"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "set current user default billing address",
+                    "request": {
+                        "url": {
+                            "protocol": "https",
+                            "host": "www.alphazento.com",
+                            "path": "api\/v1\/customers\/me\/default_billing_address\/:address_id",
+                            "query": []
+                        },
+                        "method": "PATCH",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "[]"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "set current user default shipping address",
+                    "request": {
+                        "url": {
+                            "protocol": "https",
+                            "host": "www.alphazento.com",
+                            "path": "api\/v1\/customers\/me\/default_shipping_address\/:address_id",
+                            "query": []
+                        },
+                        "method": "PATCH",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "[]"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Customer Sales",
+            "description": "",
+            "item": [
+                {
+                    "name": "create an order by current user",
+                    "request": {
+                        "url": {
+                            "protocol": "https",
+                            "host": "www.alphazento.com",
+                            "path": "api\/v1\/sales\/orders",
+                            "query": []
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "[]"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Dashboard",
+            "description": "",
+            "item": [
+                {
+                    "name": "Retrieves dashboard menus",
+                    "request": {
+                        "url": {
+                            "protocol": "https",
+                            "host": "www.alphazento.com",
+                            "path": "api\/v1\/admin\/dashboard\/menus",
+                            "query": []
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "[]"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "Retrieves dashboard datatable component's schema defines",
+                    "request": {
+                        "url": {
+                            "protocol": "https",
+                            "host": "www.alphazento.com",
+                            "path": "api\/v1\/admin\/metadata\/datatable-schemas\/:table",
+                            "query": []
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "[]"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "Retrieves dashboard model-editor component's model's defines",
+                    "request": {
+                        "url": {
+                            "protocol": "https",
+                            "host": "www.alphazento.com",
+                            "path": "api\/v1\/admin\/metadata\/models\/:model",
+                            "query": [],
+                            "variable": [
+                                {
+                                    "id": "model",
+                                    "key": "model",
+                                    "value": "ut",
+                                    "description": "The model name"
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "[]"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Dynamic Attribute",
+            "description": "",
+            "item": [
+                {
+                    "name": "Retrieves a dynamic attribute's details",
+                    "request": {
+                        "url": {
+                            "protocol": "https",
+                            "host": "www.alphazento.com",
+                            "path": "api\/v1\/admin\/dynamic-attributes\/:id",
+                            "query": [],
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "6",
+                                    "description": "number The ID of the dynamic attribute."
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "[]"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "Retrieves dynamic attributes of a Model",
+                    "request": {
+                        "url": {
+                            "protocol": "https",
+                            "host": "www.alphazento.com",
+                            "path": "api\/v1\/admin\/dynamic-attributes\/models\/:model",
+                            "query": [],
+                            "variable": [
+                                {
+                                    "id": "model",
+                                    "key": "model",
+                                    "value": "sed",
+                                    "description": "The model name"
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "[]"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "store a dynamic attribute's details",
+                    "request": {
+                        "url": {
+                            "protocol": "https",
+                            "host": "www.alphazento.com",
+                            "path": "api\/v1\/admin\/dynamic-attributes",
+                            "query": []
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "[]"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "Update a dynamic attribute's details",
+                    "request": {
+                        "url": {
+                            "protocol": "https",
+                            "host": "www.alphazento.com",
+                            "path": "api\/v1\/admin\/dynamic-attributes\/:id",
+                            "query": [],
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "19",
+                                    "description": "number The ID of the dynamic attribute."
+                                }
+                            ]
+                        },
+                        "method": "PATCH",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"attributes\": \"impedit\"\n}"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "Retrieves a dynamic attribute's map values when its value can has a value mapping",
+                    "request": {
+                        "url": {
+                            "protocol": "https",
+                            "host": "www.alphazento.com",
+                            "path": "api\/v1\/admin\/dynamic-attributes\/:id\/values",
+                            "query": [],
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "1",
+                                    "description": "number dynamic attribute's ID"
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "[]"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "Retrieves a dynamic attribute set which the attribute belongs to",
+                    "request": {
+                        "url": {
+                            "protocol": "https",
+                            "host": "www.alphazento.com",
+                            "path": "api\/v1\/admin\/dynamic-attributes\/:id\/sets",
+                            "query": [],
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "16",
+                                    "description": "number dynamic attribute's ID"
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "[]"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "Retrieves dynamic attribute set of a Model",
+                    "request": {
+                        "url": {
+                            "protocol": "https",
+                            "host": "www.alphazento.com",
+                            "path": "api\/v1\/admin\/dynamic-attribute-sets\/models\/:model",
+                            "query": [],
+                            "variable": [
+                                {
+                                    "id": "model",
+                                    "key": "model",
+                                    "value": "veniam",
+                                    "description": "The model name"
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "[]"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "Retrieves a dynamic attribute set",
+                    "request": {
+                        "url": {
+                            "protocol": "https",
+                            "host": "www.alphazento.com",
+                            "path": "api\/v1\/admin\/dynamic-attribute-sets\/:id",
+                            "query": [],
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "17",
+                                    "description": "number The ID of the dynamic attribute."
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "[]"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "create a dynamic attribute set",
+                    "request": {
+                        "url": {
+                            "protocol": "https",
+                            "host": "www.alphazento.com",
+                            "path": "api\/v1\/admin\/dynamic-attribute-sets",
+                            "query": []
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "[]"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "update a dynamic attribute set's detail",
+                    "request": {
+                        "url": {
+                            "protocol": "https",
+                            "host": "www.alphazento.com",
+                            "path": "api\/v1\/admin\/dynamic-attribute-sets\/:id",
+                            "query": [],
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "1",
+                                    "description": "number The ID of the dynamic attribute set."
+                                }
+                            ]
+                        },
+                        "method": "PATCH",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"attributes\": {\n        \"name\": \"cum\",\n        \"description\": \"dolor\",\n        \"active\": false\n    }\n}"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "add a dynamic attribute to a set",
+                    "request": {
+                        "url": {
+                            "protocol": "https",
+                            "host": "www.alphazento.com",
+                            "path": "api\/v1\/admin\/dynamic-attribute-sets\/:attr_set_id\/attributes\/:attr_id",
+                            "query": []
+                        },
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "[]"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "Remove a dynamic attribute from a set",
+                    "request": {
+                        "url": {
+                            "protocol": "https",
+                            "host": "www.alphazento.com",
+                            "path": "api\/v1\/admin\/dynamic-attribute-sets\/:attr_set_id\/attributes\/:attr_id",
+                            "query": []
+                        },
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "[]"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "update a model which has dynamic attribute",
+                    "request": {
+                        "url": {
+                            "protocol": "https",
+                            "host": "www.alphazento.com",
+                            "path": "api\/v1\/admin\/model\/:model\/:id",
+                            "query": [],
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "19",
+                                    "description": "number model's id"
+                                },
+                                {
+                                    "id": "model",
+                                    "key": "model",
+                                    "value": "vero",
+                                    "description": "string model's type"
+                                }
+                            ]
+                        },
+                        "method": "PATCH",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "[]"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "Get braintree client token.",
+                    "request": {
+                        "url": {
+                            "protocol": "https",
+                            "host": "www.alphazento.com",
+                            "path": "api\/v1\/braintree\/token",
+                            "query": []
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "[]"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                }
+            ]
+        },
+        {
+            "name": "FileFinder",
+            "description": "",
+            "item": [
+                {
+                    "name": "upload file to specified folder",
+                    "request": {
+                        "url": {
+                            "protocol": "https",
+                            "host": "www.alphazento.com",
+                            "path": "api\/v1\/admin\/upload\/:visibility",
+                            "query": [],
+                            "variable": [
+                                {
+                                    "id": "visibility",
+                                    "key": "visibility",
+                                    "value": "asperiores",
+                                    "description": "string  availabe values ['public', 'private']"
+                                }
+                            ]
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "[]"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "upload file to specified folder",
+                    "request": {
+                        "url": {
+                            "protocol": "https",
+                            "host": "www.alphazento.com",
+                            "path": "api\/v1\/admin\/upload\/:visibility\/:folder",
+                            "query": [],
+                            "variable": [
+                                {
+                                    "id": "visibility",
+                                    "key": "visibility",
+                                    "value": "quo",
+                                    "description": "string  availabe values ['public', 'private']"
+                                },
+                                {
+                                    "id": "folder",
+                                    "key": "folder",
+                                    "value": "quis",
+                                    "description": "string find in specified folder"
+                                }
+                            ]
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "[]"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "find specified files in specified folder",
+                    "request": {
+                        "url": {
+                            "protocol": "https",
+                            "host": "www.alphazento.com",
+                            "path": "api\/v1\/admin\/files-finder\/:visibility",
+                            "query": [],
+                            "variable": [
+                                {
+                                    "id": "visibility",
+                                    "key": "visibility",
+                                    "value": "sunt",
+                                    "description": "string availabe values ['public', 'private']"
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"type\": \"aspernatur\",\n    \"text\": \"recusandae\"\n}"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "find specified files in specified folder",
+                    "request": {
+                        "url": {
+                            "protocol": "https",
+                            "host": "www.alphazento.com",
+                            "path": "api\/v1\/admin\/files-finder\/:visibility\/:folder",
+                            "query": [],
+                            "variable": [
+                                {
+                                    "id": "visibility",
+                                    "key": "visibility",
+                                    "value": "dolorem",
+                                    "description": "string availabe values ['public', 'private']"
+                                },
+                                {
+                                    "id": "folder",
+                                    "key": "folder",
+                                    "value": "quos",
+                                    "description": "string find in specified folder"
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"type\": \"vitae\",\n    \"text\": \"et\"\n}"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                }
+            ]
+        },
+        {
+            "name": "HelloSns",
+            "description": "",
+            "item": [
+                {
+                    "name": "account connect between sns and this site",
+                    "request": {
+                        "url": {
+                            "protocol": "https",
+                            "host": "www.alphazento.com",
+                            "path": "api\/v1\/hellosns\/connect",
+                            "query": [
+                                {
+                                    "key": "authResponse",
+                                    "value": "consequatur",
+                                    "description": "string authorize response from SNS",
+                                    "disabled": false
+                                }
+                            ]
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "[]"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Passport",
+            "description": "",
+            "item": [
+                {
+                    "name": "issue client token",
+                    "request": {
+                        "url": {
+                            "protocol": "https",
+                            "host": "www.alphazento.com",
+                            "path": "api\/v1\/admin\/oauth2\/token",
+                            "query": []
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"username\": \"ad\",\n    \"password\": \"nemo\"\n}"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "refresh a client token",
+                    "request": {
+                        "url": {
+                            "protocol": "https",
+                            "host": "www.alphazento.com",
+                            "path": "api\/v1\/admin\/oauth2\/refresh",
+                            "query": []
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "[]"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "get current passport user's profile",
+                    "request": {
+                        "url": {
+                            "protocol": "https",
+                            "host": "www.alphazento.com",
+                            "path": "api\/v1\/admin\/oauth2\/profile",
+                            "query": []
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "[]"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "issue client token",
+                    "request": {
+                        "url": {
+                            "protocol": "https",
+                            "host": "www.alphazento.com",
+                            "path": "api\/v1\/oauth2\/token",
+                            "query": []
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"username\": \"sint\",\n    \"password\": \"eum\"\n}"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "refresh a client token",
+                    "request": {
+                        "url": {
+                            "protocol": "https",
+                            "host": "www.alphazento.com",
+                            "path": "api\/v1\/oauth2\/refresh",
+                            "query": []
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "[]"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "register a Passport user",
+                    "request": {
+                        "url": {
+                            "protocol": "https",
+                            "host": "www.alphazento.com",
+                            "path": "api\/v1\/oauth2\/register",
+                            "query": []
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"username\": \"ratione\",\n    \"password\": \"est\",\n    \"name\": \"eum\"\n}"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "logout current Passport user",
+                    "request": {
+                        "url": {
+                            "protocol": "https",
+                            "host": "www.alphazento.com",
+                            "path": "api\/v1\/oauth2\/logout",
+                            "query": []
+                        },
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "[]"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "get current passport user's profile",
+                    "request": {
+                        "url": {
+                            "protocol": "https",
+                            "host": "www.alphazento.com",
+                            "path": "api\/v1\/oauth2\/profile",
+                            "query": []
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "[]"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Payment",
+            "description": "",
+            "item": [
+                {
+                    "name": "estimate a payment for a shopping cart",
+                    "request": {
+                        "url": {
+                            "protocol": "https",
+                            "host": "www.alphazento.com",
+                            "path": "api\/v1\/payment\/estimate",
+                            "query": []
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "[]"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "capture or validate caputred payment\nif you want to create order directlly in this method, it wll call create order",
+                    "request": {
+                        "url": {
+                            "protocol": "https",
+                            "host": "www.alphazento.com",
+                            "path": "api\/v1\/payment\/capture\/:method",
+                            "query": []
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "[]"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Shipment",
+            "description": "",
+            "item": [
+                {
+                    "name": "estimate shipping methods for a shopping cart",
+                    "request": {
+                        "url": {
+                            "protocol": "https",
+                            "host": "www.alphazento.com",
+                            "path": "api\/v1\/shipment\/estimate\/carts\/:cart_guid",
+                            "query": []
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "[]"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Shopping Cart",
+            "description": "",
+            "item": [
+                {
+                    "name": "Retrieves current user's shopping cart",
+                    "request": {
+                        "url": {
+                            "protocol": "https",
+                            "host": "www.alphazento.com",
+                            "path": "api\/v1\/cart",
+                            "query": []
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "[]"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "create a new shopping cart for current user",
+                    "request": {
+                        "url": {
+                            "protocol": "https",
+                            "host": "www.alphazento.com",
+                            "path": "api\/v1\/cart",
+                            "query": []
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "[]"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "delete current shopping cart of current user",
+                    "request": {
+                        "url": {
+                            "protocol": "https",
+                            "host": "www.alphazento.com",
+                            "path": "api\/v1\/cart",
+                            "query": []
+                        },
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "[]"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "add Item to shopping cart",
+                    "request": {
+                        "url": {
+                            "protocol": "https",
+                            "host": "www.alphazento.com",
+                            "path": "api\/v1\/cart\/items",
+                            "query": []
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "[]"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "delete a shopping cart item",
+                    "request": {
+                        "url": {
+                            "protocol": "https",
+                            "host": "www.alphazento.com",
+                            "path": "api\/v1\/cart\/items\/:item_id",
+                            "query": []
+                        },
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "[]"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "update a shopping cart item's quantity",
+                    "request": {
+                        "url": {
+                            "protocol": "https",
+                            "host": "www.alphazento.com",
+                            "path": "api\/v1\/cart\/items\/:item_id\/quantity\/:quantity",
+                            "query": []
+                        },
+                        "method": "PATCH",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "[]"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "update a shopping cart's email address",
+                    "request": {
+                        "url": {
+                            "protocol": "https",
+                            "host": "www.alphazento.com",
+                            "path": "api\/v1\/cart\/email",
+                            "query": []
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "[]"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "try to get current coupon code from a shopping cart",
+                    "request": {
+                        "url": {
+                            "protocol": "https",
+                            "host": "www.alphazento.com",
+                            "path": "api\/v1\/cart\/coupon",
+                            "query": []
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "[]"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "cancel a coupon",
+                    "request": {
+                        "url": {
+                            "protocol": "https",
+                            "host": "www.alphazento.com",
+                            "path": "api\/v1\/cart\/coupon",
+                            "query": []
+                        },
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "[]"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "try to apply coupon code for a shopping cart",
+                    "request": {
+                        "url": {
+                            "protocol": "https",
+                            "host": "www.alphazento.com",
+                            "path": "api\/v1\/cart\/coupon",
+                            "query": []
+                        },
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "[]"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "set current shopping cart's billing address",
+                    "request": {
+                        "url": {
+                            "protocol": "https",
+                            "host": "www.alphazento.com",
+                            "path": "api\/v1\/cart\/billing_address",
+                            "query": []
+                        },
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "[]"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "set current shopping cart's shipping address",
+                    "request": {
+                        "url": {
+                            "protocol": "https",
+                            "host": "www.alphazento.com",
+                            "path": "api\/v1\/cart\/shipping_address",
+                            "query": []
+                        },
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "[]"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "merge a shopping cart to anohter shopping cart",
+                    "request": {
+                        "url": {
+                            "protocol": "https",
+                            "host": "www.alphazento.com",
+                            "path": "api\/v1\/cart\/to\/:to_cart_guid",
+                            "query": []
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "[]"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "get current shopping cart's customer details",
+                    "request": {
+                        "url": {
+                            "protocol": "https",
+                            "host": "www.alphazento.com",
+                            "path": "api\/v1\/cart\/customer",
+                            "query": []
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "[]"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "attach a customer to a shopping cart",
+                    "request": {
+                        "url": {
+                            "protocol": "https",
+                            "host": "www.alphazento.com",
+                            "path": "api\/v1\/cart\/customer",
+                            "query": []
+                        },
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "[]"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Store Configuration",
+            "description": "",
+            "item": [
+                {
+                    "name": "Retrieves dashboard uri store-configurations side menus",
+                    "request": {
+                        "url": {
+                            "protocol": "https",
+                            "host": "www.alphazento.com",
+                            "path": "api\/v1\/admin\/configs\/config-menus",
+                            "query": []
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "[]"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "Retrieves config groups belongs to uri store-configurations side menu item",
+                    "request": {
+                        "url": {
+                            "protocol": "https",
+                            "host": "www.alphazento.com",
+                            "path": "api\/v1\/admin\/configs\/groups\/:l0\/:l1",
+                            "query": [],
+                            "variable": [
+                                {
+                                    "id": "l0",
+                                    "key": "l0",
+                                    "value": "corrupti",
+                                    "description": "Level0 Store Configuration Access Key"
+                                },
+                                {
+                                    "id": "l1",
+                                    "key": "l1",
+                                    "value": "illum",
+                                    "description": "Level1 Store Configuration Access Key"
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "[]"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "store configurable item value",
+                    "request": {
+                        "url": {
+                            "protocol": "https",
+                            "host": "www.alphazento.com",
+                            "path": "api\/v1\/admin\/configs\/:key",
+                            "query": [
+                                {
+                                    "key": "value",
+                                    "value": "recusandae",
+                                    "description": "Configuration Item new value",
+                                    "disabled": false
+                                }
+                            ],
+                            "variable": [
+                                {
+                                    "id": "key",
+                                    "key": "key",
+                                    "value": "dolore",
+                                    "description": "Configuration Item Access key"
+                                }
+                            ]
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "[]"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Utility",
+            "description": "",
+            "item": [
+                {
+                    "name": "list coutries and their states",
+                    "request": {
+                        "url": {
+                            "protocol": "https",
+                            "host": "www.alphazento.com",
+                            "path": "api\/v1\/countries",
+                            "query": [
+                                {
+                                    "key": "active_for",
+                                    "value": "frontend",
+                                    "description": "['backend', 'frontend']",
+                                    "disabled": false
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "[]"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                }
+            ]
+        },
+        {
+            "name": "general",
+            "description": "",
+            "item": [
+                {
+                    "name": "api\/{all}",
+                    "request": {
+                        "url": {
+                            "protocol": "https",
+                            "host": "www.alphazento.com",
+                            "path": "api\/:all",
+                            "query": []
+                        },
+                        "method": "OPTIONS",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "[]"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                }
+            ]
+        }
+    ]
+}
